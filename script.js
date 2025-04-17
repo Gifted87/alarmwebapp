@@ -280,11 +280,11 @@ document.addEventListener('DOMContentLoaded', () => {
         mainToggleButton.addEventListener('click', () => {
             console.log('[App Event] Main toggle button clicked.');
             if (appAlarmState === 'active') {
-                sendSms('ALARM OFF'); // Command to deactivate
+                sendSms('end'); // Command to deactivate
                  // Optimistic UI update (or wait for confirmation if possible)
                  setAppAlarmState('inactive');
             } else if (appAlarmState === 'inactive') {
-                sendSms('ALARM ON'); // Command to activate
+                sendSms('activate'); // Command to activate
                  // Optimistic UI update
                  setAppAlarmState('active');
             } else {
@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activateButton) {
         activateButton.addEventListener('click', () => {
             console.log('[App Event] Activate button clicked.');
-            sendSms('ALARM ON');
+            sendSms('activate');
             setAppAlarmState('active'); // Optimistic update
         });
     }
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (deactivateButton) {
         deactivateButton.addEventListener('click', () => {
             console.log('[App Event] Deactivate button clicked.');
-            sendSms('ALARM OFF');
+            sendSms('end');
             setAppAlarmState('inactive'); // Optimistic update
         });
     }
