@@ -1,0 +1,17 @@
+  {
+    "name": "Alarm Control Offline",
+    "short_name": "AlarmCtrl",
+    "description": "Control an SMS-based alarm system, works offline.",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#282c34",
+    "theme_color": "#3a3f47",
+    "icons": [
+      {
+        "src": "./image.png",
+        "sizes": "72x72",
+        "type": "image/png"
+      }
+    ]       
+  }
