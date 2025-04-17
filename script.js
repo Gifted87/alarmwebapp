@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const newIndex = index + 1;
         // Assuming the command format is SET<index>:<number>, e.g., SET0:123456789
-        const command = `SET $newIndex},${numberToSet}`;
+        const command = `SET ${newIndex},${numberToSet}`;
         sendSms(command);
         // Also save all numbers locally when one is updated/sent
         savePhoneNumbers();
